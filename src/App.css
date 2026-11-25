@@ -1,0 +1,155 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+}
+
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #141e30, #243b55);
+  padding: 20px;
+}
+
+.calculator {
+  width: 360px;
+  padding: 25px;
+  border-radius: 25px;
+  background: #1e293b;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
+}
+
+.calculator-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  margin-bottom: 25px;
+}
+
+.calculator-header h2 {
+  font-size: 23px;
+  font-weight: 600;
+}
+
+.calculator-header p {
+  color: #94a3b8;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.calculator-icon {
+  width: 42px;
+  height: 42px;
+  background: #334155;
+  color: #38bdf8;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+}
+
+.display {
+  background: #0f172a;
+  border-radius: 15px;
+  padding: 20px;
+  min-height: 115px;
+  margin-bottom: 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  overflow: hidden;
+}
+
+.expression {
+  color: #64748b;
+  font-size: 14px;
+  min-height: 20px;
+  word-break: break-all;
+}
+
+.result {
+  color: white;
+  font-size: 36px;
+  font-weight: 600;
+  margin-top: 8px;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+}
+
+.button-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.calc-button {
+  height: 60px;
+  border: none;
+  border-radius: 14px;
+  background: #334155;
+  color: white;
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.calc-button:hover {
+  background: #475569;
+  transform: translateY(-2px);
+}
+
+.calc-button:active {
+  transform: scale(0.94);
+}
+
+.special {
+  background: #475569;
+  color: #38bdf8;
+}
+
+.operator {
+  background: #0f766e;
+  color: white;
+}
+
+.operator:hover {
+  background: #0d9488;
+}
+
+.equal {
+  background: #0ea5e9;
+  color: white;
+}
+
+.equal:hover {
+  background: #0284c7;
+}
+
+.calculator-footer {
+  text-align: center;
+  color: #64748b;
+  font-size: 11px;
+  margin-top: 22px;
+}
+
+@media (max-width: 400px) {
+  .calculator {
+    width: 100%;
+    padding: 18px;
+  }
+
+  .calc-button {
+    height: 55px;
+  }
+}
